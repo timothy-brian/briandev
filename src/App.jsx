@@ -564,7 +564,7 @@ export default function Portfolio() {
             💬 WhatsApp
           </button>
           </a>
-          <a href="mailto:emaillo@gmail.com" target="_blank">
+          <a href="mailto:andrieswilar@gmail.com" target="_blank">
           <button className="outline-btn">
             📧 Email
           </button>
