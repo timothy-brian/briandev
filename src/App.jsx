@@ -266,10 +266,11 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <button className="cta-btn" style={{ padding: "8px 20px", fontSize: "12px" }}
-          onClick={() => scrollTo("contact")}>
-          Hire Me
-        </button>
+        <a href="https://wa.me/6288213179608" target="_blank" rel="noopener noreferrer">
+          <button className="cta-btn" style={{ padding: "8px 20px", fontSize: "12px" }}>
+            Hire Me
+          </button>
+        </a>
       </nav>
 
       {/* HERO */}
