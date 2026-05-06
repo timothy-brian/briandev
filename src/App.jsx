@@ -559,20 +559,21 @@ export default function Portfolio() {
         </p>
 
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+          <a href="https://wa.me/6288213179608" target="_blank" rel="noopener noreferrer">
           <button className="cta-btn" style={{ fontSize: "14px" }}>
             💬 WhatsApp
           </button>
+          </a>
+          <a href="mailto:emaillo@gmail.com" target="_blank">
           <button className="outline-btn">
             📧 Email
           </button>
+          </a>
           <a href="https://www.upwork.com/freelancers/~01ee6f9f8f506919b5?mp_source=share" target="_blank" rel="noopener noreferrer">
           <button className="outline-btn">
             💼 Upwork
           </button>
           </a>
-          {/* <button className="outline-btn">
-            💼 Upwork
-          </button> */}
         </div>
 
         <div style={{ marginTop: "80px", paddingTop: "32px", borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
