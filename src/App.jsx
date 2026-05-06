@@ -309,7 +309,7 @@ export default function Portfolio() {
           position: "absolute", top: "88px", right: "40px",
           animation: "fadeIn 1s ease 0.4s both",
         }}>
-          <span className="syne" style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 600 }}>©2025</span>
+          <span className="syne" style={{ fontSize: "13px", color: "var(--muted)", fontWeight: 600 }}>©2026</span>
         </div>
 
         <div style={{ maxWidth: "960px" }}>
@@ -575,7 +575,7 @@ export default function Portfolio() {
             Brian<span style={{ color: "var(--accent)" }}>.</span>dev
           </span>
           <span className="sans" style={{ fontSize: "12px", color: "var(--muted)" }}>
-            © 2025 · Jakarta, Indonesia
+            © 2026 · Jakarta, Indonesia
           </span>
           <div style={{ display: "flex", gap: "20px" }}>
             {["LinkedIn", "GitHub", "Instagram"].map(s => (
