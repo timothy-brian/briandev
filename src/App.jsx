@@ -471,7 +471,7 @@ export default function Portfolio() {
                 <div className="syne" style={{ fontSize: "14px", fontWeight: 700, color: "var(--accent)" }}>{s.price}</div>
                 <button className="outline-btn" style={{ marginTop: "10px", padding: "8px 16px", fontSize: "11px" }}
                   onClick={() => scrollTo("contact")}>
-                  Konsultasi
+                  Consultation
                 </button>
               </div>
             </div>
@@ -495,7 +495,7 @@ export default function Portfolio() {
               Discuss your needs — I can help from concept to deployment.
             </p>
           </div>
-          <button className="cta-btn" onClick={() => scrollTo("contact")}>Hubungi Sekarang</button>
+          <button className="cta-btn" onClick={() => scrollTo("contact")}>Contact Now</button>
         </div>
       </section>
 
@@ -506,12 +506,12 @@ export default function Portfolio() {
           <h2 className="syne" style={{ fontSize: "40px", fontWeight: 800, letterSpacing: "-0.02em" }}>
             Digital <span className="serif" style={{ fontStyle: "italic", color: "var(--accent2)" }}>Products</span>
           </h2>
-          <span className="sans" style={{ color: "var(--muted)", fontSize: "14px" }}>Tersedia di Tokopedia & Gumroad</span>
+          {/* <span className="sans" style={{ color: "var(--muted)", fontSize: "14px" }}>Tersedia di Tokopedia & Gumroad</span> */}
         </div>
 
         <div style={{ marginTop: "40px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
           {[
-            { name: "Dasar Algoritma & Pemrograman", by: "netbase", price: "Rp 29.000", tag: "Ebook" },
+            { name: "Landing Page Starter Kit", by: "Angkasa Code Hub", price: "Rp 149.000", tag: "Code" },
             { name: "IT Support Template Pack", by: "Angkasa Code Hub", price: "Rp 49.000", tag: "Template" },
             { name: "Prompt Pack untuk UMKM", by: "netbase", price: "Rp 19.000", tag: "Prompt" },
           ].map((p, i) => (
@@ -527,7 +527,7 @@ export default function Portfolio() {
               <p className="sans" style={{ fontSize: "12px", color: "var(--muted)", marginBottom: "16px" }}>by {p.by}</p>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span className="syne" style={{ fontSize: "15px", fontWeight: 700, color: "var(--accent)" }}>{p.price}</span>
-                <button className="outline-btn" style={{ padding: "6px 14px", fontSize: "11px" }}>Beli</button>
+                <button className="outline-btn" style={{ padding: "6px 14px", fontSize: "11px" }}>Buy</button>
               </div>
             </div>
           ))}
@@ -555,7 +555,7 @@ export default function Portfolio() {
           Let's <span className="serif" style={{ fontStyle: "italic", color: "var(--accent)" }}>build</span><br />something.
         </h2>
         <p className="sans" style={{ color: "var(--muted)", fontSize: "15px", marginBottom: "48px", lineHeight: 1.8 }}>
-          Ada project, pertanyaan, atau sekadar mau ngobrol?<br />Saya terbuka untuk kolaborasi dan freelance.
+          Have a project, a question, or just want to chat?<br />I'm open to collaboration and freelancing.
         </p>
 
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
