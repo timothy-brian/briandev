@@ -10,7 +10,7 @@ const projects = [
     name: "Angkasa Code Hub",
     tag: "Agency",
     desc: "Web development, SEO, and content writing agency for Indonesian businesses.",
-    link: "#",
+    link: "https://www.instagram.com/angkasacodehub/",
     status: "Active",
     color: "#E8C547",
     icon: "⚡",
@@ -30,7 +30,7 @@ const projects = [
     name: "circlehub.id",
     tag: "Community",
     desc: "A collaborative community for young builders, creators, and entrepreneurs.",
-    link: "#",
+    link: "https://www.instagram.com/circlehub.id",
     status: "Active",
     color: "#A78BFA",
     icon: "🌀",
@@ -40,7 +40,7 @@ const projects = [
     name: "Gudang IT Jakarta",
     tag: "E-Commerce",
     desc: "IT equipment store on Shopee. Networking equipment, hardware, and technical accessories.",
-    link: "#",
+    link: "https://shopee.co.id/gudangitjakarta",
     status: "Active",
     color: "#F97316",
     icon: "🖥️",
@@ -428,6 +428,7 @@ export default function Portfolio() {
               <p className="sans" style={{ fontSize: "13px", color: "var(--muted)", lineHeight: 1.7 }}>{p.desc}</p>
 
               <div style={{ marginTop: "24px", display: "flex", justifyContent: "flex-end" }}>
+                <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
                 <span className="sans" style={{
                   fontSize: "12px", fontWeight: 500,
                   color: hoveredProject === p.id ? p.color : "var(--muted)",
@@ -437,6 +438,7 @@ export default function Portfolio() {
                 }}>
                   Visit →
                 </span>
+                </a>
               </div>
             </div>
           ))}
