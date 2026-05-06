@@ -256,7 +256,7 @@ export default function Portfolio() {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <span className="glow-dot" />
           <span className="syne" style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "-0.01em" }}>
-            brian<span style={{ color: "var(--accent)" }}>.</span>dev
+            Brian<span style={{ color: "var(--accent)" }}>.</span>dev
           </span>
         </div>
 
@@ -361,7 +361,7 @@ export default function Portfolio() {
       <div style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "14px 0", overflow: "hidden" }}>
         <div className="marquee-wrap">
           <div className="marquee-inner">
-            {Array(4).fill("WEB DEVELOPMENT · IT SUPPORT · SEO · AI CHATBOT · DIGITAL PRODUCTS · KOMUNITAS · THRIFTING · EDUKASI · ").map((t, i) => (
+            {Array(4).fill("WEB DEVELOPMENT · IT SUPPORT · SEO · AI CHATBOT · DIGITAL PRODUCTS · COMMUNITY · THRIFTING · EDUCATION · ").map((t, i) => (
               <span key={i} className="syne" style={{ fontSize: "12px", fontWeight: 600, color: "var(--muted)", letterSpacing: "0.1em", marginRight: "0" }}>{t}</span>
             ))}
           </div>
