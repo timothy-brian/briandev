@@ -451,7 +451,7 @@ export default function Portfolio() {
           <div>
             <span className="section-label" style={{ display: "block", marginBottom: "12px" }}>— 02 / Services</span>
             <h2 className="syne" style={{ fontSize: "48px", fontWeight: 800, letterSpacing: "-0.02em" }}>
-              Apa yang <span className="serif" style={{ fontStyle: "italic", color: "var(--accent)" }}>bisa</span><br />saya bantu
+              How <span className="serif" style={{ fontStyle: "italic", color: "var(--accent)" }}>can</span><br /> i help?
             </h2>
           </div>
         </div>
