@@ -489,7 +489,7 @@ export default function Portfolio() {
         }}>
           <div>
             <h3 className="syne" style={{ fontSize: "22px", fontWeight: 800, marginBottom: "6px" }}>
-              Need a <span style={{ color: "var(--accent)" }}>custom</span>? solution?
+              Need a <span style={{ color: "var(--accent)" }}>custom</span> solution?
             </h3>
             <p className="sans" style={{ fontSize: "14px", color: "var(--muted)" }}>
               Discuss your needs — I can help from concept to deployment.
