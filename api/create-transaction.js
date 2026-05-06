@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     body: JSON.stringify({
       transaction_details: {
         order_id,
-        gross_amount: amount,
+        gross_amount: Number(amount)
       },
       customer_details: {
         first_name: name,
