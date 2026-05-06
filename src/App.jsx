@@ -301,7 +301,7 @@ export default function Portfolio() {
           animation: "fadeIn 1s ease 0.4s both",
         }}>
           <span className="section-label">Jakarta, Indonesia</span>
-          <span className="section-label">Web & Network Engineer</span>
+          <span className="section-label">Available Worldwide</span>
         </div>
 
         {/* Year */}
@@ -315,7 +315,7 @@ export default function Portfolio() {
         <div style={{ maxWidth: "960px" }}>
           <div className="hero-line">
             <span className="section-label" style={{ marginBottom: "24px", display: "block" }}>
-              — Builder · Engineer · Creator
+              — Network Engineer · Web Developer · IT Consultant
             </span>
           </div>
           <h1 className="hero-line syne hero-name" style={{
@@ -337,7 +337,7 @@ export default function Portfolio() {
           </h1>
 
           <div className="hero-line" style={{ marginTop: "36px", display: "flex", gap: "16px", alignItems: "center", flexWrap: "wrap" }}>
-            <button className="cta-btn" onClick={() => scrollTo("projects")}>Lihat Projects</button>
+            <button className="cta-btn" onClick={() => scrollTo("projects")}>View Projects</button>
             <button className="outline-btn" onClick={() => scrollTo("services")}>Services</button>
           </div>
         </div>
