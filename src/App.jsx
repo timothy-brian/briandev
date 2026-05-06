@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     name: "Angkasa Code Hub",
     tag: "Agency",
-    desc: "Web development, SEO, dan content writing agency untuk bisnis Indonesia.",
+    desc: "Web development, SEO, and content writing agency for Indonesian businesses.",
     link: "#",
     status: "Active",
     color: "#E8C547",
@@ -18,8 +18,8 @@ const projects = [
   {
     id: 2,
     name: "netbase",
-    tag: "Edukasi",
-    desc: "Platform edukasi programming untuk pelajar Indonesia. Ebook, materi, dan tools belajar.",
+    tag: "Education",
+    desc: "A programming education platform for Indonesian students. Ebooks, materials, and learning tools.",
     link: "#",
     status: "Active",
     color: "#5BE0A8",
@@ -28,8 +28,8 @@ const projects = [
   {
     id: 3,
     name: "circlehub.id",
-    tag: "Komunitas",
-    desc: "Komunitas kolaboratif untuk builder, kreator, dan entrepreneur muda.",
+    tag: "Community",
+    desc: "A collaborative community for young builders, creators, and entrepreneurs.",
     link: "#",
     status: "Active",
     color: "#A78BFA",
@@ -39,7 +39,7 @@ const projects = [
     id: 4,
     name: "Gudang IT Jakarta",
     tag: "E-Commerce",
-    desc: "Toko perangkat IT di Shopee. Peralatan jaringan, hardware, dan aksesori teknis.",
+    desc: "IT equipment store on Shopee. Networking equipment, hardware, and technical accessories.",
     link: "#",
     status: "Active",
     color: "#F97316",
@@ -49,7 +49,7 @@ const projects = [
     id: 5,
     name: "Thrift Studio",
     tag: "Fashion",
-    desc: "Pakaian thrift pilihan dari Pasar Senen. Curated vintage & streetwear.",
+    desc: "Selected thrift clothing from Pasar Senen. Curated vintage and streetwear.",
     link: "#",
     status: "Coming Soon",
     color: "#F472B6",
@@ -58,10 +58,10 @@ const projects = [
 ];
 
 const services = [
-  { name: "Web Development", desc: "Landing page, company profile, web app", price: "dari Rp 750rb" },
-  { name: "IT Support & Infrastructure", desc: "Setup jaringan, helpdesk, server management", price: "dari Rp 500rb" },
-  { name: "SEO Optimization", desc: "Audit, on-page, strategi konten", price: "dari Rp 1jt" },
-  { name: "AI Chatbot Integration", desc: "WhatsApp bot, web chatbot untuk bisnis", price: "dari Rp 1.5jt" },
+  { name: "Web Development", desc: "Landing page, company profile, web app", price: "From Rp 750rb" },
+  { name: "IT Support & Infrastructure", desc: "Network setup, helpdesk, server management", price: "From Rp 500rb" },
+  { name: "SEO Optimization", desc: "Audit, on-page, content strategy", price: "From Rp 1jt" },
+  { name: "AI Chatbot Integration", desc: "WhatsApp bot, web chatbot for business", price: "From Rp 1.5jt" },
 ];
 
 export default function Portfolio() {
@@ -489,10 +489,10 @@ export default function Portfolio() {
         }}>
           <div>
             <h3 className="syne" style={{ fontSize: "22px", fontWeight: 800, marginBottom: "6px" }}>
-              Butuh solusi <span style={{ color: "var(--accent)" }}>custom</span>?
+              Need a <span style={{ color: "var(--accent)" }}>custom</span>? solution?
             </h3>
             <p className="sans" style={{ fontSize: "14px", color: "var(--muted)" }}>
-              Diskusikan kebutuhan Anda — saya bisa bantu dari konsep sampai deployment.
+              Discuss your needs — I can help from concept to deployment.
             </p>
           </div>
           <button className="cta-btn" onClick={() => scrollTo("contact")}>Hubungi Sekarang</button>
