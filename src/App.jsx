@@ -565,9 +565,14 @@ export default function Portfolio() {
           <button className="outline-btn">
             📧 Email
           </button>
+          <a href="https://www.upwork.com/freelancers/~01ee6f9f8f506919b5?mp_source=share" target="_blank" rel="noopener noreferrer">
           <button className="outline-btn">
             💼 Upwork
           </button>
+          </a>
+          {/* <button className="outline-btn">
+            💼 Upwork
+          </button> */}
         </div>
 
         <div style={{ marginTop: "80px", paddingTop: "32px", borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
