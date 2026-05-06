@@ -301,7 +301,7 @@ export default function Portfolio() {
           animation: "fadeIn 1s ease 0.4s both",
         }}>
           <span className="section-label">Jakarta, Indonesia</span>
-          <span className="section-label">Network & Web Engineer</span>
+          <span className="section-label">Web & Network Engineer</span>
         </div>
 
         {/* Year */}
