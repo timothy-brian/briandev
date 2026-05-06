@@ -511,9 +511,9 @@ export default function Portfolio() {
 
         <div style={{ marginTop: "40px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
           {[
-            { name: "Landing Page Starter Kit", by: "Angkasa Code Hub", price: "Rp 149.000", tag: "Code" },
-            { name: "IT Support Template Pack", by: "Angkasa Code Hub", price: "Rp 49.000", tag: "Template" },
-            { name: "Prompt Pack untuk UMKM", by: "netbase", price: "Rp 19.000", tag: "Prompt" },
+            { name: "Landing Page Starter Kit", by: "Angkasa Code Hub", price: "Rp 249.000", tag: "Code" },
+            { name: "IT Support Template Pack", by: "netbase", price: "Rp 149.000", tag: "Template" },
+            { name: "IT Student Survival Kit", by: "netbase", price: "Rp 49.000", tag: "Book" },
           ].map((p, i) => (
             <div key={i} style={{
               flex: "1 1 240px",
