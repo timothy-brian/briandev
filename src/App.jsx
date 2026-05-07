@@ -659,19 +659,13 @@ export default function Portfolio() {
 
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
           <a href="https://wa.me/6288213179608" target="_blank" rel="noopener noreferrer">
-          <button className="cta-btn" style={{ fontSize: "14px" }}>
-            💬 WhatsApp
-          </button>
+            <button className="cta-btn" style={{ fontSize: "14px" }}>💬 WhatsApp</button>
           </a>
           <a href="mailto:andrieswilar@gmail.com" target="_blank">
-          <button className="outline-btn">
-            📧 Email
-          </button>
+            <button className="outline-btn">📧 Email</button>
           </a>
           <a href="https://www.upwork.com/freelancers/~01ee6f9f8f506919b5?mp_source=share" target="_blank" rel="noopener noreferrer">
-          <button className="outline-btn">
-            💼 Upwork
-          </button>
+            <button className="outline-btn">💼 Upwork</button>
           </a>
         </div>
 
@@ -692,7 +686,6 @@ export default function Portfolio() {
                 <span className="nav-link" style={{ cursor: "pointer" }}>{s.label}</span>
               </a>
             ))}
-          </div>
           </div>
         </div>
       </section>
