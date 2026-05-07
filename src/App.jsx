@@ -76,32 +76,59 @@ export default function Portfolio() {
   const [loading, setLoading] = useState(false);
 
   const handleBuy = async () => {
-    if (!buyerName || !buyerEmail) return alert("Isi nama dan email dulu!");
-    setLoading(true);
-    try {
-      const res = await fetch("/api/create-transaction", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          order_id: `${selectedProduct.id}-${Date.now()}`,
-          amount: selectedProduct.amount,
-          name: buyerName,
-          email: buyerEmail,
-          product_name: selectedProduct.name,
-        }),
-      });
-      const data = await res.json();
-      window.snap.pay(data.token, {
-        onSuccess: () => { alert("Pembayaran berhasil! Cek email untuk link download."); setSelectedProduct(null); },
-        onPending: () => alert("Menunggu pembayaran..."),
-        onError: () => alert("Pembayaran gagal, coba lagi."),
-        onClose: () => setLoading(false),
-      });
-    } catch (err) {
-      alert("Terjadi error, coba lagi.");
-    }
-    setLoading(false);
-  };
+  if (!buyerName || !buyerEmail) return alert("Isi nama dan email dulu!");
+  setLoading(true);
+  try {
+    const res = await fetch("/api/create-transaction", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        order_id: `${selectedProduct.id}-${Date.now()}`,
+        amount: selectedProduct.amount,
+        name: buyerName,
+        email: buyerEmail,
+        product_name: selectedProduct.name,
+      }),
+    });
+    const data = await res.json();
+
+    // Lock scroll
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
+
+    window.snap.pay(data.token, {
+      onSuccess: () => {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        alert("Pembayaran berhasil! Cek email untuk link download.");
+        setSelectedProduct(null);
+      },
+      onPending: () => {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        alert("Menunggu pembayaran...");
+      },
+      onError: () => {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        alert("Pembayaran gagal, coba lagi.");
+      },
+      onClose: () => {
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+        setLoading(false);
+      },
+    });
+  } catch (err) {
+    alert("Terjadi error, coba lagi.");
+  }
+  setLoading(false);
+};
 
   // ✅ SAMPAI SINI
 
