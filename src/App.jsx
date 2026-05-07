@@ -70,7 +70,7 @@ export default function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const [showModal, setShowModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [buyerName, setBuyerName] = useState("");
   const [buyerEmail, setBuyerEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -542,29 +542,29 @@ export default function Portfolio() {
       </section>
 
       {/* MODAL */}
-      {showModal && (
+      {selectedProduct && (
         <div style={{
           position: "fixed", inset: 0, zIndex: 999,
           background: "rgba(0,0,0,0.85)",
           display: "flex", alignItems: "center", justifyContent: "center",
           padding: "20px",
-        }} onClick={() => setShowModal(false)}>
+        }} onClick={() => setSelectedProduct(null)}>
           <div style={{
             background: "#1a1a1d", border: "1px solid var(--border)",
             borderRadius: "16px", padding: "40px", maxWidth: "480px", width: "100%",
           }} onClick={e => e.stopPropagation()}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "24px" }}>
               <div>
-                <span className="tag-pill" style={{ color: "#5BE0A8", borderColor: "rgba(91,224,168,0.3)", marginBottom: "10px", display: "inline-block" }}>BOOK</span>
-                <h3 className="syne" style={{ fontSize: "22px", fontWeight: 800 }}>IT Student Survival Kit</h3>
-                <p className="sans" style={{ fontSize: "13px", color: "var(--muted)", marginTop: "4px" }}>by netbase</p>
+                <span className="tag-pill" style={{ color: "#5BE0A8", borderColor: "rgba(91,224,168,0.3)", marginBottom: "10px", display: "inline-block" }}>{selectedProduct.tag}</span>
+                <h3 className="syne" style={{ fontSize: "22px", fontWeight: 800 }}>{selectedProduct.name}</h3>
+                <p className="sans" style={{ fontSize: "13px", color: "var(--muted)", marginTop: "4px" }}>by {selectedProduct.by}</p>
               </div>
-              <span style={{ cursor: "pointer", color: "var(--muted)", fontSize: "20px" }} onClick={() => setShowModal(false)}>✕</span>
+              <span style={{ cursor: "pointer", color: "var(--muted)", fontSize: "20px" }} onClick={() => setSelectedProduct(null)}>✕</span>
             </div>
 
-            <p className="sans" style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "16px" }}>5 PDF yang lo dapat:</p>
+            <p className="sans" style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "16px" }}>Yang lo dapat:</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "28px" }}>
-              {["Waterfall Methodology", "Agile & Scrum", "OSI Model", "Subnetting Mastery", "SQL Mastery"].map((item, i) => (
+              {selectedProduct.items.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                   <span style={{ color: "#5BE0A8" }}>✓</span>
                   <span className="sans" style={{ fontSize: "14px" }}>{item}</span>
@@ -578,7 +578,7 @@ export default function Portfolio() {
               <input placeholder="Alamat email aktif" value={buyerEmail} onChange={e => setBuyerEmail(e.target.value)} className="sans"
                 style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: "8px", padding: "12px 16px", color: "var(--text)", fontSize: "14px", outline: "none", width: "100%" }} />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "8px" }}>
-                <span className="syne" style={{ fontSize: "22px", fontWeight: 800, color: "var(--accent)" }}>Rp 49.000</span>
+                <span className="syne" style={{ fontSize: "22px", fontWeight: 800, color: "var(--accent)" }}>{selectedProduct.price}</span>
                 <button className="cta-btn" onClick={handleBuy} disabled={loading}>
                   {loading ? "Memproses..." : "Bayar Sekarang"}
                 </button>
@@ -599,9 +599,21 @@ export default function Portfolio() {
 
         <div style={{ marginTop: "40px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
           {[
-            { name: "Landing Page Starter Kit", by: "Angkasa Code Hub", price: "Rp 249.000", tag: "Code", hasModal: false },
-            { name: "IT Support Template Pack", by: "netbase", price: "Rp 149.000", tag: "Template", hasModal: false },
-            { name: "IT Student Survival Kit", by: "netbase", price: "Rp 49.000", tag: "Book", hasModal: true },
+            {
+              name: "Landing Page Starter Kit", by: "Angkasa Code Hub",
+              price: "Rp 249.000", amount: 249000, tag: "Code", id: "LANDING-PAGE-KIT",
+              items: ["File HTML siap pakai", "CSS styling lengkap", "JavaScript interaktif", "Responsive design", "Panduan kustomisasi"],
+            },
+            {
+              name: "IT Support Template Pack", by: "netbase",
+              price: "Rp 149.000", amount: 149000, tag: "Template", id: "IT-SUPPORT-PACK",
+              items: ["Template Daily & Monthly IT Report", "Template IT Asset Management", "Template Network Troubleshooting Checklist", "Template Onboarding IT Support Kit", "Template IT Documentation"],
+            },
+            {
+              name: "IT Student Survival Kit", by: "netbase",
+              price: "Rp 49.000", amount: 49000, tag: "Book", id: "IT-SURVIVAL-KIT",
+              items: ["Waterfall Methodology", "Agile & Scrum", "OSI Model", "Subnetting Mastery", "SQL Mastery"],
+            },
           ].map((p, i) => (
             <div key={i} style={{ flex: "1 1 240px", background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "10px", padding: "24px" }}>
               <span className="tag-pill" style={{ marginBottom: "12px", display: "inline-block", color: "var(--accent2)", borderColor: "rgba(91,224,168,0.3)" }}>{p.tag}</span>
@@ -610,7 +622,7 @@ export default function Portfolio() {
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span className="syne" style={{ fontSize: "15px", fontWeight: 700, color: "var(--accent)" }}>{p.price}</span>
                 <button className="outline-btn" style={{ padding: "6px 14px", fontSize: "11px" }}
-                  onClick={() => p.hasModal && setShowModal(true)}>
+                  onClick={() => setSelectedProduct(p)}>
                   Buy
                 </button>
               </div>
