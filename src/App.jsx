@@ -84,7 +84,7 @@ export default function Portfolio() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           order_id: "ORDER-" + Date.now(),
-          amount: 49000,
+          amount: amount: selectedProduct.amount,,
           name: buyerName,
           email: buyerEmail,
         }),
