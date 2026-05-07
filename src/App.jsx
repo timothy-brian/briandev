@@ -91,40 +91,11 @@ export default function Portfolio() {
       }),
     });
     const data = await res.json();
-
-    // Simpan posisi scroll sebelum dikunci
-    const scrollY = window.scrollY;
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = "100%";
-
-    const unlockScroll = () => {
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
-      document.body.style.top = "";
-      window.scrollTo(0, scrollY); // kembalikan ke posisi semula
-    };
-
     window.snap.pay(data.token, {
-      onSuccess: () => {
-        unlockScroll();
-        alert("Pembayaran berhasil! Cek email untuk link download.");
-        setSelectedProduct(null);
-      },
-      onPending: () => {
-        unlockScroll();
-        alert("Menunggu pembayaran...");
-      },
-      onError: () => {
-        unlockScroll();
-        alert("Pembayaran gagal, coba lagi.");
-      },
-      onClose: () => {
-        unlockScroll();
-        setLoading(false);
-      },
+      onSuccess: () => { alert("Pembayaran berhasil! Cek email untuk link download."); setSelectedProduct(null); },
+      onPending: () => alert("Menunggu pembayaran..."),
+      onError: () => alert("Pembayaran gagal, coba lagi."),
+      onClose: () => setLoading(false),
     });
   } catch (err) {
     alert("Terjadi error, coba lagi.");
