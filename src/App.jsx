@@ -575,14 +575,14 @@ export default function Portfolio() {
             </div>
 
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: "24px", display: "flex", flexDirection: "column", gap: "12px" }}>
-              <input placeholder="Nama lengkap" value={buyerName} onChange={e => setBuyerName(e.target.value)} className="sans"
+              <input placeholder="Full Name" value={buyerName} onChange={e => setBuyerName(e.target.value)} className="sans"
                 style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: "8px", padding: "12px 16px", color: "var(--text)", fontSize: "14px", outline: "none", width: "100%" }} />
-              <input placeholder="Alamat email aktif" value={buyerEmail} onChange={e => setBuyerEmail(e.target.value)} className="sans"
+              <input placeholder="Active Email Address" value={buyerEmail} onChange={e => setBuyerEmail(e.target.value)} className="sans"
                 style={{ background: "var(--bg)", border: "1px solid var(--border)", borderRadius: "8px", padding: "12px 16px", color: "var(--text)", fontSize: "14px", outline: "none", width: "100%" }} />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "8px" }}>
                 <span className="syne" style={{ fontSize: "22px", fontWeight: 800, color: "var(--accent)" }}>{selectedProduct.price}</span>
                 <button className="cta-btn" onClick={handleBuy} disabled={loading}>
-                  {loading ? "Memproses..." : "Bayar Sekarang"}
+                  {loading ? "Processing..." : "Buy Now"}
                 </button>
               </div>
             </div>
@@ -625,7 +625,7 @@ export default function Portfolio() {
                 <span className="syne" style={{ fontSize: "15px", fontWeight: 700, color: "var(--accent)" }}>{p.price}</span>
                 <button className="outline-btn" style={{ padding: "6px 14px", fontSize: "11px" }}
                   onClick={() => setSelectedProduct(p)}>
-                  Buy
+                  What's Included?
                 </button>
               </div>
             </div>
