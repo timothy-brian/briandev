@@ -683,9 +683,16 @@ export default function Portfolio() {
             © 2026 · Jakarta, Indonesia
           </span>
           <div style={{ display: "flex", gap: "20px" }}>
-            {["LinkedIn", "GitHub", "Instagram"].map(s => (
-              <span key={s} className="nav-link" style={{ cursor: "pointer" }}>{s}</span>
+            {[
+              { label: "LinkedIn", url: "https://www.linkedin.com/in/timothybrian/" },
+              { label: "GitHub", url: "https://github.com/timothy-brian" },
+              { label: "Instagram", url: "https://www.instagram.com/_timothybrian/" },
+            ].map(s => (
+              <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                <span className="nav-link" style={{ cursor: "pointer" }}>{s.label}</span>
+              </a>
             ))}
+          </div>
           </div>
         </div>
       </section>
