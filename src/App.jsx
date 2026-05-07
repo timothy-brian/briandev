@@ -83,15 +83,16 @@ export default function Portfolio() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          order_id: "ORDER-" + Date.now(),
-          amount: amount: selectedProduct.amount,,
+          order_id: `${selectedProduct.id}-${Date.now()}`,
+          amount: selectedProduct.amount,
           name: buyerName,
           email: buyerEmail,
+          product_name: selectedProduct.name,
         }),
       });
       const data = await res.json();
       window.snap.pay(data.token, {
-        onSuccess: () => { alert("Pembayaran berhasil! Cek email untuk link download."); setShowModal(false); },
+        onSuccess: () => { alert("Pembayaran berhasil! Cek email untuk link download."); setSelectedProduct(null); },
         onPending: () => alert("Menunggu pembayaran..."),
         onError: () => alert("Pembayaran gagal, coba lagi."),
         onClose: () => setLoading(false),
@@ -101,6 +102,7 @@ export default function Portfolio() {
     }
     setLoading(false);
   };
+
   // ✅ SAMPAI SINI
 
   useEffect(() => {
