@@ -149,4 +149,4 @@ git push origin main
 
 ## 📄 License
 
-MIT License © 2026 Brian Timothy
+© 2026 Timothy Brian
