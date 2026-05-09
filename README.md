@@ -107,7 +107,7 @@ Atau tambahkan di **Vercel Dashboard → Settings → Environment Variables**.
 
 Website ini menggunakan **Midtrans Snap** untuk payment in-page:
 
-1. Customer klik tombol **"Peek Inside"** di produk
+1. Customer klik tombol **"What's Include?"** di produk
 2. Modal muncul dengan daftar isi produk
 3. Customer isi nama & email → klik **"Bayar Sekarang"**
 4. Midtrans Snap popup muncul di halaman yang sama
